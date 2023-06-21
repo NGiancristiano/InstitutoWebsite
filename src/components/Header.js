@@ -5,10 +5,10 @@ function Header() {
     return(
         <header>
             <div>
-                <img src={logo} width={"100px"}/>
+                <img src={logo} alt="logo" width={"100px"}/>
                 <h1>Shigue, espacio multicultural</h1>
             </div>
-                <Navegacion items={["Inicio","Cursos","Sobre nosotros","Contacto"]}/>
+                <Navegacion items={[{name:"Inicio",path:'/'},{name:"Cursos",path:'/courses'},{name:"Sobre Nosotros",path:'/'},{name:"Contacto",path:'/'}]}/>
         </header>
     )
 }
