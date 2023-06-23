@@ -1,7 +1,7 @@
 import ContactForm from './Contact';
 import Presentation from './Presentation';
-import Courses from './Courses';
 import About from './About';
+import CoursesPage from './CoursesPage';
 
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
                 <Presentation/>
             </section>
             <section>
-                <Courses courses={["Ingles","Japones","Aleman","Frances","Portugues","Sumie","Aikido","Karate"]}/>
+                <CoursesPage />
             </section>
             <section>
                 <About/>

@@ -104,3 +104,108 @@ form input {
 }
 
 /*---------------------End of Contact Form----------------------*/
+/*---------------------Course Card----------------------*/
+
+
+.courses-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  max-width: 350px;
+  height: 200px;
+  max-height: 200px;
+  margin: 10px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px black;
+}
+
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  bottom: 30px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  text-shadow: 3px 3px 20px #003366,
+  -2px 1px 30px #003366;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgba(0, 0, 0,0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link-course {
+  border-top: solid 1px #f3f3f3;
+  height: 40px;
+  line-height: 50px;
+  position: relative;
+  bottom: 15px;
+}
+
+.card .back a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+  text-shadow: 3px 3px 20px #003366,
+  -2px 1px 30px #003366;
+}
+
+/*---------------------End of Course Card----------------------*/
+
+.image-detail{
+  width: 350px;
+  height: 200px;
+  border: 2px solid gray;
+  
+}

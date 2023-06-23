@@ -6,6 +6,7 @@ import Home from './components/Home';
 import CoursesPage from './components/CoursesPage';
 import AddCourse from './components/AddCourse';
 import NotFound from './components/NotFound';
+import CourseDetail from './components/CourseDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' exact element={<Home/>}/>
           <Route path='/courses' element={<CoursesPage/>}/>
           <Route path='/addcourse' element={<AddCourse/>}/>
+          <Route path='/course/:id' element={<CourseDetail/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
         
