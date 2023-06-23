@@ -1,32 +1,27 @@
-function CoursesPage () {
-    const courses =[
-        {
-            name:'Ingles',
-            teacher:'Estela'
-        },{
-            name:'Japones',
-            teacher:'Estela'
-        },{
-            name:'Aikido',
-            teacher:'Matias'
-        },{
-            name:'Italiano',
-            teacher:''
-        }
 
-    ]
+import courses from '../database/cursos.json'
+import { useEffect, useState } from 'react'
+
+function CoursesPage () {
+    const [jsonData,setJsonData] = useState([])
+    
+    useEffect(()=>{
+        setJsonData(courses)
+        console.log(jsonData)
+        console.log('Actualizado')
+    },[jsonData])
     return (
         <div>
             <h2>Cursos</h2>
             <ul>
-                {courses === 0 && <p>Cargando...</p>}
+                {jsonData.length === 0 && <p>Cargando...</p>}
                 {
-                    courses.map((course,i) => {
+                    jsonData.map((course) => {
                         return(
-                            <li key={i}>
+                            <li key={course.id}>
                                 <h3>{course.name}</h3>
                                 <h4>Profesor: {course.teacher}</h4>
-                                <p>Descripcion: In anim Lorem Lorem dolor. Aliqua consequat aliqua velit ipsum exercitation voluptate id do voluptate culpa exercitation. Eiusmod ex laboris veniam aliqua labore sint. Magna ex anim fugiat nulla esse sunt consequat sunt. Do elit irure ut excepteur sit duis.</p>
+                                <p>Descripcion: {course.description}</p>
                             </li>
                         )
                     })

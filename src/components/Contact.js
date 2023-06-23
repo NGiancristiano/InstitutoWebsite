@@ -7,6 +7,13 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let formData = {
+      name: name,
+      email: email,
+      message: message
+    }
+    console.log(formData)
     // Aquí puedes realizar cualquier lógica adicional, como enviar el formulario a un servidor.
 
     // Reiniciar los campos del formulario

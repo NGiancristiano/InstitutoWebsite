@@ -6,7 +6,7 @@ function Navegacion (props) {
           <ul>
             {props.items.map((item,i) => {
                 return(
-                    <li><Link to={item.path} key={i}>{item.name}</Link></li>
+                    <li key={item+i}><Link to={item.path} >{item.name}</Link></li>
                 )
             })}
           </ul>
