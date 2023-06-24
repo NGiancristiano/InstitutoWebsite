@@ -7,7 +7,7 @@ function CourseDetail () {
     console.log()
     const params = useParams()
 
-    const courseToDetail = courses.find(course => course.id == params.id)
+    const courseToDetail = courses.find(course => course.id === params.id)
 
     return(
         <div>
@@ -15,7 +15,7 @@ function CourseDetail () {
             <h2>{courseToDetail.name}</h2>
             <p>Profesor:{courseToDetail.teacher}</p>
             <p>Descripcion:{courseToDetail.description}</p>
-            <Contact/>
+            <Contact courseID={courseToDetail.id}/>
         </div>
     )
 
