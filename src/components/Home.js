@@ -14,9 +14,13 @@ function Home() {
                 <CoursesPage />
             </section>
             <section>
-                <About/>
-            </section>
             <ContactForm/>
+                
+            </section>
+            <section>
+            <About/>
+            </section>
+            
         </div>
     )
 }

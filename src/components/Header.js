@@ -8,7 +8,7 @@ function Header() {
                 <img src={logo} alt="logo" width={"100px"}/>
                 <h1>Shigue, espacio multicultural</h1>
             </div>
-                <Navegacion items={[{name:"Inicio",path:'/'},{name:"Cursos",path:'/courses'},{name:"Sobre Nosotros",path:'/'},{name:"Contacto",path:'/contact'}]}/>
+                <Navegacion items={[{name:"Inicio",path:'/'},{name:"Cursos",path:'/courses'},{name:"Sobre Nosotros",path:'/about'},{name:"Contacto",path:'/contact'}]}/>
         </header>
     )
 }

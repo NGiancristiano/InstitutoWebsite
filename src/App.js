@@ -8,6 +8,7 @@ import AddCourse from './components/AddCourse';
 import NotFound from './components/NotFound';
 import CourseDetail from './components/CourseDetail';
 import ContactForm from './components/Contact';
+import About from './components/About';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/addcourse' element={<AddCourse/>}/>
           <Route path='/course/:id' element={<CourseDetail/>}/>
           <Route path='/contact' element={<ContactForm/>}/>
+          <Route path='/about' element={<About/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
         
